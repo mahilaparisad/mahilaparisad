@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore photos and videos from Mahila Parishad events">
+    <title>Gallery - Mahila Parishad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-lotus"></i>
+                        <span>Mahila Parishad</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Cherished moments from our events and celebrations</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="religious">Religious Events</button>
+                <button class="filter-btn" data-filter="cultural">Cultural Programs</button>
+                <button class="filter-btn" data-filter="social">Social Service</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+                <button class="filter-btn" data-filter="videos">Videos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="section pt-0">
+        <div class="container">
+            <div class="masonry-gallery" id="galleryGrid">
+                <!-- Religious Events -->
+                <div class="gallery-item-full" data-category="religious">
+                    <img src="images/gallery/mahavir-jayanti-1.jpg" alt="Mahavir Jayanti celebration with devotees" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Mahavir Jayanti Celebration</h4>
+                        <p>Annual celebration honoring Lord Mahavir</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full" data-category="religious">
+                    <img src="images/gallery/paryushan-1.jpg" alt="Paryushan prayers and meditation" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Paryushan Mahaparva</h4>
+                        <p>Eight days of spiritual reflection</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full" data-category="religious">
+                    <img src="images/gallery/diwali-1.jpg" alt="Diwali lamp lighting ceremony" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Diwali Celebration</h4>
+                        <p>Festival of lights and joy</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cultural Programs -->
+                <div class="gallery-item-full" data-category="cultural">
+                    <img src="images/gallery/dance-performance.jpg" alt="Traditional dance performance" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Classical Dance Performance</h4>
+                        <p>Showcasing traditional arts</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full" data-category="cultural">
+                    <img src="images/gallery/cultural-festival-1.jpg" alt="Cultural festival stage performance" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Annual Cultural Festival</h4>
+                        <p>Celebrating our rich heritage</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full" data-category="cultural">
+                    <img src="images/gallery/music-concert.jpg" alt="Traditional music concert" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Devotional Music Concert</h4>
+                        <p>Melodious bhajans and stotras</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Social Service -->
+                <div class="gallery-item-full" data-category="social">
+                    <img src="images/gallery/food-distribution.jpg" alt="Community food distribution drive" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Food Distribution Drive</h4>
+                        <p>Serving the community with love</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full" data-category="social">
+                    <img src="images/gallery/health-camp.jpg" alt="Free health check-up camp" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Health Awareness Camp</h4>
+                        <p>Free health services for all</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full" data-category="social">
+                    <img src="images/gallery/education-drive.jpg" alt="Educational material distribution" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Education Support Program</h4>
+                        <p>Empowering through education</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Workshops -->
+                <div class="gallery-item-full" data-category="workshops">
+                    <img src="images/gallery/workshop-1.jpg" alt="Women empowerment workshop session" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Women Empowerment Workshop</h4>
+                        <p>Skills and leadership development</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full" data-category="workshops">
+                    <img src="images/gallery/youth-workshop.jpg" alt="Youth engagement program" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Youth Leadership Program</h4>
+                        <p>Inspiring the next generation</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full" data-category="workshops">
+                    <img src="images/gallery/craft-workshop.jpg" alt="Traditional craft workshop" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h4>Traditional Craft Workshop</h4>
+                        <p>Preserving artistic heritage</p>
+                        <button class="view-btn" onclick="openLightbox(this)">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Videos -->
+                <div class="gallery-item-full video" data-category="videos">
+                    <img src="images/gallery/video-thumb-1.jpg" alt="Cultural festival highlights video" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h4>Cultural Festival 2024 Highlights</h4>
+                        <p>Watch the full event coverage</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full video" data-category="videos">
+                    <img src="images/gallery/video-thumb-2.jpg" alt="Mahavir Jayanti celebration video" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h4>Mahavir Jayanti Celebration</h4>
+                        <p>Complete ceremony recording</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item-full video" data-category="videos">
+                    <img src="images/gallery/video-thumb-3.jpg" alt="Community service documentary" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h4>Community Service Journey</h4>
+                        <p>Our impact on society</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav prev" onclick="navigateLightbox(-1)" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav next" onclick="navigateLightbox(1)" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mahila Parishad</h3>
+                    <p>Empowering women through culture, service, and spirituality since our inception.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="committee.html">Committee Members</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +91 XXX XXX XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@mahilaparishad.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jain Samaj Community Center</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mahila Parishad - Jain Samaj. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

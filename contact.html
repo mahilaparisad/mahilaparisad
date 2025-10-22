@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Mahila Parishad - Get in touch with us">
+    <title>Contact Us - Mahila Parishad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-lotus"></i>
+                        <span>Mahila Parishad</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <p class="form-description">Have a question or suggestion? Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <select id="subject" name="subject" required aria-required="true">
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="membership">Membership Information</option>
+                                <option value="events">Event Registration</option>
+                                <option value="volunteer">Volunteer Opportunities</option>
+                                <option value="donation">Donation Information</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required aria-required="true"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-wrapper">
+                    <h2>Get in Touch</h2>
+                    <p>Feel free to reach out to us through any of the following channels:</p>
+
+                    <div class="contact-info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Visit Us</h4>
+                                <p>Jain Samaj Community Center<br>Main Street, City - 123456<br>State, India</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+91XXXXXXXXXX">+91 XXX XXX XXXX</a><br>
+                                <a href="tel:+91XXXXXXXXXX">+91 XXX XXX XXXX</a></p>
+                                <small>Mon-Sat: 10:00 AM - 5:00 PM</small>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:info@mahilaparishad.org">info@mahilaparishad.org</a><br>
+                                <a href="mailto:contact@mahilaparishad.org">contact@mahilaparishad.org</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Office Hours</h4>
+                                <p>Monday - Friday: 10:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 2:00 PM<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h4>Connect With Us</h4>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn facebook" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-btn instagram" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-btn twitter" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-btn youtube" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container-fluid p-0">
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9742876933783!2d77.20910931508084!3d28.644800082421916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd371d9e0d7f%3A0xd6f1d94e0cf515f5!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mahila Parishad Location Map">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How can I become a member of Mahila Parishad?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To become a member, you can fill out the membership form on our website or visit our office. Membership is open to all women in the Jain community who share our values and vision. Please contact us for more details about membership benefits and fees.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How can I volunteer for upcoming events?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We welcome volunteers for all our events! You can register as a volunteer by filling out the contact form above and selecting "Volunteer Opportunities" as the subject, or reach out to us directly via email or phone. We'll be happy to match you with opportunities that align with your interests and availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Are your events open to non-members?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many of our cultural and social events are open to the entire community, regardless of membership status. However, some programs may be exclusive to members. Please check the specific event details on our Events page or contact us for more information.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How can I make a donation to support your initiatives?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We greatly appreciate donations that help us continue our community service and cultural activities. You can contact us directly to discuss donation options, or send us a message through the contact form selecting "Donation Information" as your subject.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you offer programs for young women and children?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We regularly organize programs specifically designed for youth and children, including cultural workshops, educational sessions, and engagement activities. Check our Events page for upcoming youth programs, or contact our Youth Affairs coordinator for more information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mahila Parishad</h3>
+                    <p>Empowering women through culture, service, and spirituality since our inception.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="committee.html">Committee Members</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +91 XXX XXX XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@mahilaparishad.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jain Samaj Community Center</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mahila Parishad - Jain Samaj. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

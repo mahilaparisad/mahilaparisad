@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming and past events organized by Mahila Parishad">
+    <title>Events - Mahila Parishad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-lotus"></i>
+                        <span>Mahila Parishad</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="branches.html">Branches</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Events</h1>
+            <p>Celebrating culture, tradition, and community together</p>
+        </div>
+    </section>
+
+    <!-- Event Tabs -->
+    <section class="section">
+        <div class="container">
+            <div class="event-tabs">
+                <button class="tab-btn active" data-tab="upcoming">Upcoming Events</button>
+                <button class="tab-btn" data-tab="past">Past Events</button>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="tab-content active" id="upcoming">
+                <div class="events-timeline">
+                    <article class="timeline-event">
+                        <div class="event-date-badge">
+                            <div class="date-box">
+                                <span class="day">15</span>
+                                <span class="month">Nov</span>
+                                <span class="year">2025</span>
+                            </div>
+                        </div>
+                        <div class="event-content-card">
+                            <div class="event-image">
+                                <img src="images/mahavir-jayanti.jpg" alt="Mahavir Jayanti celebration" loading="lazy">
+                                <span class="event-category">Religious</span>
+                            </div>
+                            <div class="event-info">
+                                <h3>Mahavir Jayanti Celebration</h3>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 9:00 AM - 6:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Main Community Hall</span>
+                                </div>
+                                <p>Join us for a grand celebration honoring Lord Mahavir's birth anniversary. The day will include special prayers, pravachan (spiritual discourse), cultural performances, and a community feast. All are welcome to participate in this auspicious occasion.</p>
+                                <div class="event-highlights">
+                                    <h4>Event Highlights:</h4>
+                                    <ul>
+                                        <li>Morning prayers and abhishek ceremony</li>
+                                        <li>Spiritual discourse by renowned Jain scholars</li>
+                                        <li>Cultural programs featuring traditional music and dance</li>
+                                        <li>Community lunch (pure vegetarian)</li>
+                                        <li>Children's activities and storytelling sessions</li>
+                                    </ul>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="contact.html" class="btn btn-primary btn-sm">Register Now</a>
+                                    <button class="btn btn-outline btn-sm share-btn">
+                                        <i class="fas fa-share-alt"></i> Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-event">
+                        <div class="event-date-badge">
+                            <div class="date-box">
+                                <span class="day">22</span>
+                                <span class="month">Nov</span>
+                                <span class="year">2025</span>
+                            </div>
+                        </div>
+                        <div class="event-content-card">
+                            <div class="event-image">
+                                <img src="images/cultural-festival.jpg" alt="Annual cultural festival" loading="lazy">
+                                <span class="event-category">Cultural</span>
+                            </div>
+                            <div class="event-info">
+                                <h3>Annual Cultural Festival</h3>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 4:00 PM - 9:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> City Convention Center</span>
+                                </div>
+                                <p>Experience the vibrant colors of Jain culture at our annual cultural festival. Enjoy traditional dance performances, musical renditions, art exhibitions, and interactive workshops that showcase our rich heritage.</p>
+                                <div class="event-highlights">
+                                    <h4>Event Highlights:</h4>
+                                    <ul>
+                                        <li>Classical and folk dance performances</li>
+                                        <li>Traditional music concerts</li>
+                                        <li>Art and craft exhibition</li>
+                                        <li>Food stalls featuring Jain cuisine</li>
+                                        <li>Fashion show showcasing traditional attire</li>
+                                    </ul>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="contact.html" class="btn btn-primary btn-sm">Register Now</a>
+                                    <button class="btn btn-outline btn-sm share-btn">
+                                        <i class="fas fa-share-alt"></i> Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-event">
+                        <div class="event-date-badge">
+                            <div class="date-box">
+                                <span class="day">05</span>
+                                <span class="month">Dec</span>
+                                <span class="year">2025</span>
+                            </div>
+                        </div>
+                        <div class="event-content-card">
+                            <div class="event-image">
+                                <img src="images/community-service.jpg" alt="Community service day" loading="lazy">
+                                <span class="event-category">Social Service</span>
+                            </div>
+                            <div class="event-info">
+                                <h3>Community Service Day</h3>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 8:00 AM - 2:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Various Locations</span>
+                                </div>
+                                <p>Join us in serving the community through various charitable activities. We'll be organizing food distribution, educational support, and health camps for underprivileged sections of society.</p>
+                                <div class="event-highlights">
+                                    <h4>Event Highlights:</h4>
+                                    <ul>
+                                        <li>Food distribution drive in slum areas</li>
+                                        <li>Free health check-up camps</li>
+                                        <li>Educational material donation to schools</li>
+                                        <li>Blood donation camp</li>
+                                        <li>Tree plantation drive</li>
+                                    </ul>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="contact.html" class="btn btn-primary btn-sm">Volunteer Now</a>
+                                    <button class="btn btn-outline btn-sm share-btn">
+                                        <i class="fas fa-share-alt"></i> Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-event">
+                        <div class="event-date-badge">
+                            <div class="date-box">
+                                <span class="day">14</span>
+                                <span class="month">Dec</span>
+                                <span class="year">2025</span>
+                            </div>
+                        </div>
+                        <div class="event-content-card">
+                            <div class="event-image">
+                                <img src="images/workshop.jpg" alt="Women empowerment workshop" loading="lazy">
+                                <span class="event-category">Educational</span>
+                            </div>
+                            <div class="event-info">
+                                <h3>Women Empowerment Workshop</h3>
+                                <div class="event-meta">
+                                    <span><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Community Learning Center</span>
+                                </div>
+                                <p>An inspiring workshop designed to empower women with leadership skills, financial literacy, and personal development strategies. Expert speakers will share insights on career growth and work-life balance.</p>
+                                <div class="event-highlights">
+                                    <h4>Event Highlights:</h4>
+                                    <ul>
+                                        <li>Leadership and communication skills session</li>
+                                        <li>Financial planning and investment workshop</li>
+                                        <li>Health and wellness talk</li>
+                                        <li>Networking opportunities</li>
+                                        <li>Q&A with successful women entrepreneurs</li>
+                                    </ul>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="contact.html" class="btn btn-primary btn-sm">Register Now</a>
+                                    <button class="btn btn-outline btn-sm share-btn">
+                                        <i class="fas fa-share-alt"></i> Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Past Events -->
+            <div class="tab-content" id="past">
+                <div class="past-events-grid">
+                    <article class="past-event-card-detailed">
+                        <div class="past-event-image">
+                            <img src="images/past-paryushan-2024.jpg" alt="Paryushan celebration 2024" loading="lazy">
+                            <div class="past-event-date">
+                                <span>August 2024</span>
+                            </div>
+                        </div>
+                        <div class="past-event-content">
+                            <h3>Paryushan Mahaparva 2024</h3>
+                            <p>An eight-day spiritual journey filled with prayers, fasting, and self-reflection. The community came together for daily pravachans, meditation sessions, and culminated with Samvatsari celebrations.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 500+ Attendees</span>
+                                <span><i class="fas fa-images"></i> 120 Photos</span>
+                            </div>
+                            <a href="gallery.html" class="view-gallery-link">
+                                View Gallery <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="past-event-card-detailed">
+                        <div class="past-event-image">
+                            <img src="images/past-diwali-2024.jpg" alt="Diwali celebration 2024" loading="lazy">
+                            <div class="past-event-date">
+                                <span>November 2024</span>
+                            </div>
+                        </div>
+                        <div class="past-event-content">
+                            <h3>Diwali & New Year Celebration</h3>
+                            <p>A magnificent celebration of lights, culture, and togetherness. The event featured traditional lamp lighting, cultural performances, and a grand community dinner.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 650+ Attendees</span>
+                                <span><i class="fas fa-images"></i> 200 Photos</span>
+                            </div>
+                            <a href="gallery.html" class="view-gallery-link">
+                                View Gallery <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="past-event-card-detailed">
+                        <div class="past-event-image">
+                            <img src="images/past-youth-program.jpg" alt="Youth engagement program" loading="lazy">
+                            <div class="past-event-date">
+                                <span>September 2024</span>
+                            </div>
+                        </div>
+                        <div class="past-event-content">
+                            <h3>Youth Engagement Program</h3>
+                            <p>An interactive program designed to connect young members with Jain traditions through fun activities, workshops, and mentorship sessions with community leaders.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 200+ Attendees</span>
+                                <span><i class="fas fa-images"></i> 85 Photos</span>
+                            </div>
+                            <a href="gallery.html" class="view-gallery-link">
+                                View Gallery <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="past-event-card-detailed">
+                        <div class="past-event-image">
+                            <img src="images/past-charity-drive.jpg" alt="Charity drive 2024" loading="lazy">
+                            <div class="past-event-date">
+                                <span>July 2024</span>
+                            </div>
+                        </div>
+                        <div class="past-event-content">
+                            <h3>Summer Charity Drive</h3>
+                            <p>A heartwarming initiative where members came together to distribute food, clothes, and essential supplies to underprivileged communities during the summer months.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 150+ Volunteers</span>
+                                <span><i class="fas fa-images"></i> 65 Photos</span>
+                            </div>
+                            <a href="gallery.html" class="view-gallery-link">
+                                View Gallery <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="past-event-card-detailed">
+                        <div class="past-event-image">
+                            <img src="images/past-cultural-night.jpg" alt="Cultural night 2024" loading="lazy">
+                            <div class="past-event-date">
+                                <span>June 2024</span>
+                            </div>
+                        </div>
+                        <div class="past-event-content">
+                            <h3>Cultural Night 2024</h3>
+                            <p>An evening of spectacular performances showcasing classical dance, devotional music, and theatrical presentations by talented members of our community.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 400+ Attendees</span>
+                                <span><i class="fas fa-images"></i> 150 Photos</span>
+                            </div>
+                            <a href="gallery.html" class="view-gallery-link">
+                                View Gallery <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="past-event-card-detailed">
+                        <div class="past-event-image">
+                            <img src="images/past-health-camp.jpg" alt="Health awareness camp" loading="lazy">
+                            <div class="past-event-date">
+                                <span>May 2024</span>
+                            </div>
+                        </div>
+                        <div class="past-event-content">
+                            <h3>Health Awareness Camp</h3>
+                            <p>A comprehensive health camp offering free check-ups, consultations with doctors, health education sessions, and distribution of medicines to community members.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 300+ Beneficiaries</span>
+                                <span><i class="fas fa-images"></i> 45 Photos</span>
+                            </div>
+                            <a href="gallery.html" class="view-gallery-link">
+                                View Gallery <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calendar Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Event Calendar 2025</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Mark your calendars for these important dates</p>
+            </div>
+            <div class="calendar-grid">
+                <div class="calendar-month-card">
+                    <h4>November 2025</h4>
+                    <ul class="calendar-events">
+                        <li><span class="date">15th</span> Mahavir Jayanti</li>
+                        <li><span class="date">22nd</span> Cultural Festival</li>
+                    </ul>
+                </div>
+                <div class="calendar-month-card">
+                    <h4>December 2025</h4>
+                    <ul class="calendar-events">
+                        <li><span class="date">5th</span> Community Service Day</li>
+                        <li><span class="date">14th</span> Women Empowerment Workshop</li>
+                        <li><span class="date">25th</span> Year-end Celebration</li>
+                    </ul>
+                </div>
+                <div class="calendar-month-card">
+                    <h4>January 2026</h4>
+                    <ul class="calendar-events">
+                        <li><span class="date">10th</span> New Year Prayer Meet</li>
+                        <li><span class="date">26th</span> Republic Day Event</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mahila Parishad</h3>
+                    <p>Empowering women through culture, service, and spirituality since our inception.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="committee.html">Committee Members</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +91 XXX XXX XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@mahilaparishad.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jain Samaj Community Center</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mahila Parishad - Jain Samaj. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>

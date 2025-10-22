@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find Mahila Parishad branches across different locations with contact details">
+    <title>Our Branches - Mahila Parishad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-lotus"></i>
+                        <span>Mahila Parishad</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="branches.html" class="active">Branches</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Branches</h1>
+            <p>Find a Mahila Parishad branch near you</p>
+        </div>
+    </section>
+
+    <!-- Branch Search Section -->
+    <section class="section">
+        <div class="container">
+            <div class="search-filter-wrapper">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="branchSearch" placeholder="Search by city, area, or contact person..." aria-label="Search branches">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Branches</button>
+                    <button class="filter-btn" data-filter="north">North Zone</button>
+                    <button class="filter-btn" data-filter="south">South Zone</button>
+                    <button class="filter-btn" data-filter="east">East Zone</button>
+                    <button class="filter-btn" data-filter="west">West Zone</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Grid Section -->
+    <section class="section pt-0">
+        <div class="container">
+            <div class="branches-grid" id="branchesGrid">
+                <!-- North Zone Branches -->
+                <article class="branch-card" data-zone="north">
+                    <div class="branch-header">
+                        <h3>Central Delhi Branch</h3>
+                        <span class="zone-badge north">North Zone</span>
+                    </div>
+                    <div class="branch-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>123 Chandni Chowk, Central Delhi, Delhi - 110006</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Contact Person:</strong>
+                                <p>Mrs. Suman Jain (Branch President)</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>+91 98XXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>delhi.central@mahilaparishad.org</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours:</strong>
+                                <p>Mon-Sat: 10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Get Directions</a>
+                </article>
+
+                <article class="branch-card" data-zone="north">
+                    <div class="branch-header">
+                        <h3>Jaipur Branch</h3>
+                        <span class="zone-badge north">North Zone</span>
+                    </div>
+                    <div class="branch-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>45 M.I. Road, Jaipur, Rajasthan - 302001</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Contact Person:</strong>
+                                <p>Mrs. Kavita Shah (Branch Secretary)</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>+91 98XXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>jaipur@mahilaparishad.org</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours:</strong>
+                                <p>Mon-Sat: 9:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Get Directions</a>
+                </article>
+
+                <!-- South Zone Branches -->
+                <article class="branch-card" data-zone="south">
+                    <div class="branch-header">
+                        <h3>Bangalore Branch</h3>
+                        <span class="zone-badge south">South Zone</span>
+                    </div>
+                    <div class="branch-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>78 MG Road, Bangalore, Karnataka - 560001</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Contact Person:</strong>
+                                <p>Mrs. Priya Mehta (Branch President)</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>+91 98XXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>bangalore@mahilaparishad.org</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours:</strong>
+                                <p>Mon-Sat: 10:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Get Directions</a>
+                </article>
+
+                <article class="branch-card" data-zone="south">
+                    <div class="branch-header">
+                        <h3>Chennai Branch</h3>
+                        <span class="zone-badge south">South Zone</span>
+                    </div>
+                    <div class="branch-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>234 Anna Salai, Chennai, Tamil Nadu - 600002</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Contact Person:</strong>
+                                <p>Mrs. Anjali Jain (Branch Secretary)</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>+91 98XXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>chennai@mahilaparishad.org</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours:</strong>
+                                <p>Mon-Sat: 9:30 AM - 5:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Get Directions</a>
+                </article>
+
+                <!-- West Zone Branches -->
+                <article class="branch-card" data-zone="west">
+                    <div class="branch-header">
+                        <h3>Mumbai Central Branch</h3>
+                        <span class="zone-badge west">West Zone</span>
+                    </div>
+                    <div class="branch-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>567 Marine Drive, Mumbai, Maharashtra - 400002</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Contact Person:</strong>
+                                <p>Mrs. Neeta Shah (Branch President)</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>+91 98XXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>mumbai@mahilaparishad.org</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours:</strong>
+                                <p>Mon-Sat: 10:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Get Directions</a>
+                </article>
+
+                <article class="branch-card" data-zone="west">
+                    <div class="branch-header">
+                        <h3>Pune Branch</h3>
+                        <span class="zone-badge west">West Zone</span>
+                    </div>
+                    <div class="branch-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>89 FC Road, Pune, Maharashtra - 411004</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Contact Person:</strong>
+                                <p>Mrs. Rekha Jain (Branch Coordinator)</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>+91 98XXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>pune@mahilaparishad.org</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours:</strong>
+                                <p>Mon-Sat: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Get Directions</a>
+                </article>
+
+                <!-- East Zone Branches -->
+                <article class="branch-card" data-zone="east">
+                    <div class="branch-header">
+                        <h3>Kolkata Branch</h3>
+                        <span class="zone-badge east">East Zone</span>
+                    </div>
+                    <div class="branch-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong>
+                                <p>456 Park Street, Kolkata, West Bengal - 700016</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Contact Person:</strong>
+                                <p>Mrs. Mamta Jain (Branch President)</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong>
+                                <p>+91 98XXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>kolkata@mahilaparishad.org</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours:</strong>
+                                <p>Mon-Sat: 10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Get Directions</a>
+                </article>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>No branches found matching your search criteria.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mahila Parishad</h3>
+                    <p>Empowering women through culture, service, and spirituality since our inception.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="branches.html">Branches</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="committee.html">Committee Members</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +91 XXX XXX XXXX</li>
+                        <li><i class="fas fa-envelope"></i> info@mahilaparishad.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jain Samaj Community Center</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mahila Parishad - Jain Samaj. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/branches.js"></script>
+</body>
+</html>
