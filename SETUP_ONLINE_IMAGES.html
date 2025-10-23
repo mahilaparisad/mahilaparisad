@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Images Setup - Mahila Parishad</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #d4a373 0%, #b8865f 100%);
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .content { padding: 40px; }
+        .step-card {
+            background: #f8f9fa;
+            border-left: 5px solid #d4a373;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            display: inline-block;
+            background: #d4a373;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        .step-card h3 {
+            display: inline-block;
+            color: #333;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        .step-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-left: 55px;
+        }
+        .method-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .method {
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .method:hover {
+            border-color: #d4a373;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(212, 163, 115, 0.3);
+        }
+        .method.recommended {
+            border-color: #4caf50;
+            position: relative;
+        }
+        .method.recommended::before {
+            content: "⭐ RECOMMENDED";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4caf50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .method-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .method h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .method p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .code-box {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .code-box code {
+            color: #50fa7b;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #d4a373;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #b8865f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 163, 115, 0.4);
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        .action-buttons {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        @media (max-width: 768px) {
+            .method-box { grid-template-columns: 1fr; }
+            .header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🖼️ Online Images Setup</h1>
+            <p style="font-size: 1.2rem; opacity: 0.95;">Use Google Drive, Imgur, or any online source for your website images!</p>
+        </div>
+
+        <div class="content">
+            <h2 style="text-align: center; color: #333; margin-bottom: 30px;">Choose Your Method</h2>
+            
+            <div class="method-box">
+                <div class="method recommended" onclick="window.open('IMAGE_URL_MANAGER.html', '_blank')">
+                    <div class="method-icon">🎨</div>
+                    <h3>Visual Manager</h3>
+                    <p>Easy-to-use interface<br>Fill forms, generate code<br><strong>Perfect for beginners!</strong></p>
+                    <br>
+                    <button class="btn">Open Manager</button>
+                </div>
+
+                <div class="method" onclick="alert('Open QUICK_START_IMAGES.md for detailed instructions')">
+                    <div class="method-icon">⚡</div>
+                    <h3>Quick Setup</h3>
+                    <p>Direct URL replacement<br>Edit HTML files manually<br><strong>Fast & simple!</strong></p>
+                    <br>
+                    <button class="btn btn-secondary">View Guide</button>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <strong>💡 What's the difference?</strong><br>
+                • <strong>Visual Manager:</strong> Helps you organize all URLs, generates code automatically<br>
+                • <strong>Quick Setup:</strong> Replace image paths directly in HTML files
+            </div>
+
+            <h2 style="color: #333; margin: 40px 0 20px;">📋 Step-by-Step Process</h2>
+
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3>Upload Images</h3>
+                <p>Upload your photos to Google Drive, Imgur, or any image hosting service. Make sure images are optimized (under 500KB each).</p>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3>Get Direct URLs</h3>
+                <p>For Google Drive: Share → "Anyone with link" → Copy File ID → Create direct URL</p>
+                <div class="code-box">
+                    <code>https://drive.google.com/uc?export=view&id=YOUR_FILE_ID</code>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3>Add URLs to Website</h3>
+                <p><strong>Method A:</strong> Use IMAGE_URL_MANAGER.html to fill all URLs visually<br>
+                <strong>Method B:</strong> Directly replace image paths in HTML files</p>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3>Test Everything</h3>
+                <p>Open your website in a browser, check all images load correctly, test on mobile devices, and verify loading speed.</p>
+            </div>
+
+            <h2 style="color: #333; margin: 40px 0 20px;">🔍 Example</h2>
+
+            <p><strong>Before (local image):</strong></p>
+            <div class="code-box">
+                &lt;img src="images/president.jpg" alt="President"&gt;
+            </div>
+
+            <p><strong>After (Google Drive URL):</strong></p>
+            <div class="code-box">
+                &lt;img src="https://drive.google.com/uc?export=view&id=1ABC123" alt="President"&gt;
+            </div>
+
+            <div class="highlight">
+                <strong>🎯 Pro Tip:</strong> Start with just the committee page (12 images) to test the process. Once comfortable, update the remaining pages!
+            </div>
+
+            <h2 style="color: #333; margin: 40px 0 20px;">📚 Available Resources</h2>
+
+            <ul style="line-height: 2.5; color: #555; margin-left: 30px;">
+                <li><strong>IMAGE_URL_MANAGER.html</strong> - Visual interface to manage all image URLs</li>
+                <li><strong>QUICK_START_IMAGES.md</strong> - Fast setup guide with examples</li>
+                <li><strong>ONLINE_IMAGES_GUIDE.md</strong> - Complete detailed documentation</li>
+                <li><strong>image-urls.js</strong> - Centralized configuration file</li>
+                <li><strong>js/image-loader.js</strong> - Automatic URL loader script</li>
+            </ul>
+
+            <h2 style="color: #333; margin: 40px 0 20px;">✅ Image Checklist</h2>
+
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background: #f8f9fa;">
+                    <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Page</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Images Needed</th>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd;">Committee</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">12 images (4 executive + 8 members)</td>
+                </tr>
+                <tr style="background: #f8f9fa;">
+                    <td style="padding: 12px; border: 1px solid #ddd;">Home</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">6 images (hero + gallery)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd;">About</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">8 images (story + events)</td>
+                </tr>
+                <tr style="background: #f8f9fa;">
+                    <td style="padding: 12px; border: 1px solid #ddd;">Events</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">10 images (upcoming + past)</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #ddd;">Gallery</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">15 images (photos + videos)</td>
+                </tr>
+                <tr style="background: #f8f9fa; font-weight: bold;">
+                    <td style="padding: 12px; border: 1px solid #ddd;">TOTAL</td>
+                    <td style="padding: 12px; border: 1px solid #ddd;">51 images</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="action-buttons">
+            <h3 style="margin-bottom: 20px; color: #333;">Ready to Get Started?</h3>
+            <a href="IMAGE_URL_MANAGER.html" class="btn" target="_blank">🎨 Open Visual Manager</a>
+            <a href="QUICK_START_IMAGES.md" class="btn btn-secondary" target="_blank">📖 Read Quick Guide</a>
+        </div>
+
+        <div style="background: #2d2d2d; color: white; padding: 30px; text-align: center;">
+            <p style="margin-bottom: 15px;">Need help? Check the comprehensive guide:</p>
+            <a href="ONLINE_IMAGES_GUIDE.md" class="btn">📚 Complete Documentation</a>
+        </div>
+    </div>
+
+    <script>
+        console.log('%c🖼️ Online Images Setup Ready!', 'font-size: 20px; color: #d4a373; font-weight: bold;');
+        console.log('%cUse IMAGE_URL_MANAGER.html for easy visual setup', 'color: #4caf50;');
+    </script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image URL Manager - Mahila Parishad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, #d4a373 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #d4a373 0%, #b8865f 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .instructions {
+            background: #fff8e1;
+            border-left: 4px solid #d4a373;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .instructions h2 {
+            color: #d4a373;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin: 10px 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            background: #f5e6d3;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .section-header h3 {
+            color: #333;
+            font-size: 1.3rem;
+        }
+
+        .image-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 100px;
+            gap: 10px;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .image-row:hover {
+            background: #f9f9f9;
+        }
+
+        .image-row label {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .image-row input {
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        .image-row input:focus {
+            outline: none;
+            border-color: #d4a373;
+        }
+
+        .image-row.filled input {
+            border-color: #4caf50;
+            background: #f1f8f4;
+        }
+
+        .status {
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .status.empty {
+            color: #ff9800;
+        }
+
+        .status.filled {
+            color: #4caf50;
+        }
+
+        .actions {
+            position: sticky;
+            bottom: 0;
+            background: white;
+            padding: 20px;
+            border-top: 2px solid #e0e0e0;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #d4a373;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #b8865f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 163, 115, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-success {
+            background: #4caf50;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #45a049;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4caf50 0%, #8bc34a 100%);
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .helper-box {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .helper-box h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .helper-box code {
+            background: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #c7254e;
+        }
+
+        @media (max-width: 768px) {
+            .image-row {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            display: block;
+            animation: slideIn 0.3s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🖼️ Image URL Manager</h1>
+            <p>Manage all your website images from Google Drive, Google Photos, or any online source</p>
+        </div>
+
+        <div class="content">
+            <div class="instructions">
+                <h2>📋 Quick Instructions</h2>
+                <ol>
+                    <li><strong>Upload images</strong> to Google Drive or Imgur</li>
+                    <li><strong>Get direct URLs</strong> for each image (see helper box below)</li>
+                    <li><strong>Paste URLs</strong> in the input fields below</li>
+                    <li><strong>Click "Generate Code"</strong> to create your image-urls.js file</li>
+                    <li><strong>Copy and replace</strong> the content in your image-urls.js file</li>
+                </ol>
+            </div>
+
+            <div class="helper-box">
+                <h4>🔗 How to get Google Drive direct URL:</h4>
+                <p>1. Share your image: "Anyone with the link can view"<br>
+                2. Copy the file ID from the URL: <code>https://drive.google.com/file/d/<strong>FILE_ID</strong>/view</code><br>
+                3. Use this format: <code>https://drive.google.com/uc?export=view&id=FILE_ID</code></p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress">0%</div>
+            </div>
+
+            <!-- HOME PAGE SECTION -->
+            <div class="section">
+                <div class="section-header">
+                    <h3>🏠 Home Page Images (6 images)</h3>
+                </div>
+                <div class="image-row">
+                    <label>Hero Background</label>
+                    <input type="url" data-key="home.hero" placeholder="https://drive.google.com/uc?export=view&id=...">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Community Event</label>
+                    <input type="url" data-key="home.communityEvent" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Gallery Image 1</label>
+                    <input type="url" data-key="home.gallery1" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Gallery Image 2</label>
+                    <input type="url" data-key="home.gallery2" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Gallery Image 3</label>
+                    <input type="url" data-key="home.gallery3" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Gallery Image 4</label>
+                    <input type="url" data-key="home.gallery4" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+            </div>
+
+            <!-- COMMITTEE PAGE SECTION -->
+            <div class="section">
+                <div class="section-header">
+                    <h3>👥 Committee Page Images (12 images)</h3>
+                </div>
+                <div class="image-row">
+                    <label>President</label>
+                    <input type="url" data-key="committee.president" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Vice President</label>
+                    <input type="url" data-key="committee.vicePresident" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Secretary</label>
+                    <input type="url" data-key="committee.secretary" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Treasurer</label>
+                    <input type="url" data-key="committee.treasurer" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Member 1</label>
+                    <input type="url" data-key="committee.member1" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Member 2</label>
+                    <input type="url" data-key="committee.member2" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Member 3</label>
+                    <input type="url" data-key="committee.member3" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Member 4</label>
+                    <input type="url" data-key="committee.member4" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Member 5</label>
+                    <input type="url" data-key="committee.member5" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Member 6</label>
+                    <input type="url" data-key="committee.member6" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Member 7</label>
+                    <input type="url" data-key="committee.member7" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+                <div class="image-row">
+                    <label>Member 8</label>
+                    <input type="url" data-key="committee.member8" placeholder="Enter image URL">
+                    <span class="status empty">Empty</span>
+                </div>
+            </div>
+
+            <!-- Add sections for About, Events, and Gallery (abbreviated for space) -->
+            <p style="text-align: center; color: #666; margin: 30px 0;">
+                <em>💡 Tip: Focus on committee images first, then add others as needed</em>
+            </p>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-secondary" onclick="loadSample()">Load Sample URLs</button>
+            <button class="btn btn-success" onclick="generateCode()">Generate Code</button>
+            <button class="btn btn-primary" onclick="copyCode()">Copy to Clipboard</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <script>
+        let generatedCode = '';
+        const totalInputs = document.querySelectorAll('input[type="url"]').length;
+
+        // Update progress and status
+        document.querySelectorAll('input[type="url"]').forEach(input => {
+            input.addEventListener('input', function() {
+                const row = this.closest('.image-row');
+                const status = row.querySelector('.status');
+                
+                if (this.value.trim() && this.value.startsWith('http')) {
+                    row.classList.add('filled');
+                    status.textContent = '✓';
+                    status.className = 'status filled';
+                } else {
+                    row.classList.remove('filled');
+                    status.textContent = 'Empty';
+                    status.className = 'status empty';
+                }
+                
+                updateProgress();
+            });
+        });
+
+        function updateProgress() {
+            const filled = document.querySelectorAll('.image-row.filled').length;
+            const percentage = Math.round((filled / totalInputs) * 100);
+            document.getElementById('progress').style.width = percentage + '%';
+            document.getElementById('progress').textContent = `${filled} / ${totalInputs} (${percentage}%)`;
+        }
+
+        function loadSample() {
+            const sampleUrl = 'https://drive.google.com/uc?export=view&id=SAMPLE_FILE_ID';
+            document.querySelectorAll('input[type="url"]').forEach((input, index) => {
+                input.value = sampleUrl.replace('SAMPLE', `FILE${index + 1}`);
+                input.dispatchEvent(new Event('input'));
+            });
+        }
+
+        function generateCode() {
+            const data = {};
+            
+            document.querySelectorAll('input[type="url"]').forEach(input => {
+                const key = input.getAttribute('data-key');
+                const value = input.value.trim();
+                
+                if (key && value) {
+                    const keys = key.split('.');
+                    let current = data;
+                    
+                    for (let i = 0; i < keys.length - 1; i++) {
+                        if (!current[keys[i]]) current[keys[i]] = {};
+                        current = current[keys[i]];
+                    }
+                    
+                    current[keys[keys.length - 1]] = value;
+                }
+            });
+
+            generatedCode = `const imageUrls = ${JSON.stringify(data, null, 4)};\n\nconst placeholderImage = 'https://via.placeholder.com/800x600/d4a373/ffffff?text=Mahila+Parishad';`;
+            
+            alert('Code generated! Click "Copy to Clipboard" to copy it.');
+        }
+
+        function copyCode() {
+            if (!generatedCode) {
+                alert('Please click "Generate Code" first!');
+                return;
+            }
+            
+            navigator.clipboard.writeText(generatedCode).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3000);
+            });
+        }
+    </script>
+</body>
+</html>
