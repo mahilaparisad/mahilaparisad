@@ -2,10 +2,7 @@
 
 [![Website Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
-<<<<<<< HEAD
 [![Online Images](https://img.shields.io/badge/images-online%20ready-brightgreen.svg)]()
-=======
->>>>>>> 57abfdf5bb327f0432e8cdd25058b1dc87176024
 
 > A modern, responsive website for Mahila Parishad - the ladies' wing of Jain Samaj community.
 
@@ -13,11 +10,8 @@
 
 **📖 START HERE:** Open `START_HERE.html` in your browser for a complete setup guide!
 
-<<<<<<< HEAD
 **🖼️ NEW! ONLINE IMAGES:** Open `SETUP_ONLINE_IMAGES.html` to use Google Drive/online images!
 
-=======
->>>>>>> 57abfdf5bb327f0432e8cdd25058b1dc87176024
 ## ✨ Features
 
 - 🎨 **Modern Design** - Clean, elegant light theme with Jain cultural aesthetics
@@ -53,7 +47,6 @@ python -m http.server 8000
 - Install "Live Server" extension
 - Right-click `index.html` → "Open with Live Server"
 
-<<<<<<< HEAD
 ## 📚 Documentation
 
 - **`START_HERE.html`** - Visual setup guide (Open in browser)
@@ -63,14 +56,6 @@ python -m http.server 8000
 - **`WEBSITE_README.md`** - Complete technical documentation
 - **`CUSTOMIZATION_CHECKLIST.md`** - Step-by-step customization guide
 - **`IMAGES_GUIDE.md`** - Image requirements and specs
-=======
-## � Documentation
-
-- **`START_HERE.html`** - Visual setup guide (Open in browser)
-- **`WEBSITE_README.md`** - Complete technical documentation
-- **`CUSTOMIZATION_CHECKLIST.md`** - Step-by-step customization guide
-- **`images/IMAGES_GUIDE.md`** - Image requirements and specs
->>>>>>> 57abfdf5bb327f0432e8cdd25058b1dc87176024
 
 ## 🎨 Tech Stack
 
@@ -80,7 +65,6 @@ python -m http.server 8000
 - Font Awesome - Icons
 - Google Fonts - Typography
 
-<<<<<<< HEAD
 ## 🖼️ Using Online Images (NEW!)
 
 You can now use images from **Google Drive**, **Google Photos**, **Imgur**, or any online source!
@@ -104,8 +88,6 @@ You can now use images from **Google Drive**, **Google Photos**, **Imgur**, or a
 - ✅ Share images across multiple projects
 - ✅ Faster deployment (no large files to upload)
 
-=======
->>>>>>> 57abfdf5bb327f0432e8cdd25058b1dc87176024
 ## � Browser Support
 
 ✅ Chrome | ✅ Firefox | ✅ Safari | ✅ Edge | ✅ Mobile Browsers
